@@ -1,103 +1,159 @@
+import Typography from "@/components/typography";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="">
+      <main className="w-full flex flex-col items-center sm:items-start bg-white">
+        <div className="w-full flex">
+          <div className="grow grid place-content-center bg-black px-24">
+            <div className="max-w-[387px]">
+              <Typography variant="h2" className="text-white mb-[21px]">Create and share your photo stories.</Typography>
+              <Typography className="text-white">Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</Typography>
+              <a href="#">Get an invite</a>
+            </div>
+          </div>
+          <Image 
+            src="/home/desktop/create-and-share.jpg"
+            alt="Man holding a camera on a dock looking at the water."
+            width={830}
+            height={650}
+            className="max-w-[830px]"
+          />
         </div>
+        <div className="w-full flex">
+          <Image 
+            src="/home/desktop/beautiful-stories.jpg"
+            alt="Man holding a camera on a dock looking at the water."
+            width={830}
+            height={650}
+            className="max-w-[830px]"
+          />
+          <div className="grow grid place-content-center bg-white px-24">
+            <div className="max-w-[387px]">
+              <Typography variant="h2" className="mb-[21px]">Beautiful stories every time</Typography>
+              <Typography>We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</Typography>
+              <a href="#">Get an invite</a>
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex">
+          <div className="grow grid place-content-center bg-white px-24">
+            <div className="max-w-[387px]">
+              <Typography variant="h2" className="mb-[21px]">Designed for everyone</Typography>
+              <Typography>Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. </Typography>
+              <a href="#">Get an invite</a>
+            </div>
+          </div>
+          <Image 
+            src="/home/desktop/designed-for-everyone.jpg"
+            alt="Man holding a camera on a dock looking at the water."
+            width={830}
+            height={650}
+            className="max-w-[830px]"
+          />
+        </div>
+        <section className="w-full h-[500px] grid grid-cols-4">
+          <div className="relative bg-[url('/stories/desktop/mountains.jpg')] bg-cover bg-center h-[500px]">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/50"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-10">
+              <h4 className="font-bold text-[18px] leading-[25px] text-white">The Mountains</h4>
+              <p className="font-normal text-[13px] text-white">by John Appleseed</p>
+              <span className="block w-full h-px bg-[#979797] mt-4 mb-5"></span>
+              <p className="flex items-center uppercase font-bold text-[12px] tracking-[2px] text-white">Read story
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14" className="ml-auto">
+                  <g fill="none" fillRule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6"/>
+                  </g>
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div className="relative bg-[url('/stories/desktop/cityscapes.jpg')] bg-cover bg-center h-[500px]">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/50"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-10">
+              <h4 className="font-bold text-[18px] leading-[25px] text-white">Sunset Cityscapes</h4>
+              <p className="font-normal text-[13px] text-white">by Benjamin Cruz</p>
+              <span className="block w-full h-px bg-[#979797] mt-4 mb-5"></span>
+              <p className="flex items-center uppercase font-bold text-[12px] tracking-[2px] text-white">Read story
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14" className="ml-auto">
+                  <g fill="none" fillRule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6"/>
+                  </g>
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div className="relative bg-[url('/stories/desktop/18-days-voyage.jpg')] bg-cover bg-center h-[500px]">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/50"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-10">
+              <h4 className="font-bold text-[18px] leading-[25px] text-white">18 Days Voyage</h4>
+              <p className="font-normal text-[13px] text-white">by Alexei Borodin</p>
+              <span className="block w-full h-px bg-[#979797] mt-4 mb-5"></span>
+              <p className="flex items-center uppercase font-bold text-[12px] tracking-[2px] text-white">Read story
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14" className="ml-auto">
+                  <g fill="none" fillRule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6"/>
+                  </g>
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div className="relative bg-[url('/stories/desktop/architecturals.jpg')] bg-cover bg-center h-[500px]">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/50"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-10">
+              <h4 className="font-bold text-[18px] leading-[25px] text-white">Architecturals</h4>
+              <p className="font-normal text-[13px] text-white">by Samantha Brooke</p>
+              <span className="block w-full h-px bg-[#979797] mt-4 mb-5"></span>
+              <p className="flex items-center uppercase font-bold text-[12px] tracking-[2px] text-white">Read story
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14" className="ml-auto">
+                  <g fill="none" fillRule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6"/>
+                  </g>
+                </svg>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="w-full max-w-[1110px] flex items-center justify-center gap-x-7 mx-auto my-32">
+          <div className="flex flex-col items-center space-y-12">
+            <Image 
+              src="/features/desktop/responsive.svg"
+              alt="Responsive icon"
+              width={72}
+              height={72}
+            />
+            <div className="space-y-4">
+              <Typography variant="h3" className="text-center">Join the community</Typography>
+              <Typography className="text-center">No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.</Typography>
+            </div>
+          </div>
+          <div className="flex flex-col items-center space-y-12">
+            <Image 
+              src="/features/desktop/responsive.svg"
+              alt="Responsive icon"
+              width={72}
+              height={72}
+            />
+            <div className="space-y-4">
+              <Typography variant="h3" className="text-center">No Photo Upload Limit</Typography>
+              <Typography className="text-center">Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.</Typography>
+            </div>
+          </div>
+          <div className="flex flex-col items-center space-y-12">
+            <Image 
+              src="/features/desktop/responsive.svg"
+              alt="Responsive icon"
+              width={72}
+              height={72}
+            />
+            <div className="space-y-4">
+              <Typography variant="h3" className="text-center">Available to Embed</Typography>
+              <Typography className="text-center">Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. </Typography>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
