@@ -135,7 +135,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full max-w-[1110px] flex items-center justify-center gap-x-7 mx-auto my-32">
+      <section className="w-full max-w-[1110px] flex items-center justify-center gap-x-7 mx-auto py-32">
         <div className="flex flex-col items-center space-y-12">
           <Image 
             src="/features/desktop/responsive.svg"
