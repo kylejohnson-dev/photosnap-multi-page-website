@@ -15,11 +15,11 @@ export default function Header() {
           />
         </Link>
         <ul className="flex items-center justify-between gap-x-9">
-          <Link href="/stories">Stories</Link>
-          <Link href="/features">Features</Link>
-          <Link href="/pricing">Pricing</Link>
+          <Link href="/stories" className="uppercase font-bold text-[12px] leading-[2px]">Stories</Link>
+          <Link href="/features" className="uppercase font-bold text-[12px] leading-[2px]">Features</Link>
+          <Link href="/pricing" className="uppercase font-bold text-[12px] leading-[2px]">Pricing</Link>
         </ul>
-        <button type="button" className="bg-black text-white px-20 py-3">Get an invite</button>
+        <button type="button" className="h-10 bg-black uppercase font-bold text-[12px] leading-[2px] text-white px-6 py-3">Get an invite</button>
       </nav>
     </header>
   );
